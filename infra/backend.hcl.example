@@ -1,0 +1,6 @@
+bucket       = "REEMPLAZAR-POR-BUCKET-STATE-GLOBALMENTE-UNICO"
+key          = "medibook/demo/terraform.tfstate"
+region       = "us-east-2"
+encrypt      = true
+use_lockfile = true
+

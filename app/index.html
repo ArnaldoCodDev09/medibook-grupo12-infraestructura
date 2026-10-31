@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0f766e">
+    <title>MediBook | Reservas de citas</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="MediBook inicio"><span class="brand-mark">M</span><span>MediBook</span></a>
+      <span class="badge">DEMO ACADÉMICA</span>
+    </header>
+    <main id="inicio" class="layout">
+      <section class="intro">
+        <p class="eyebrow">TU SALUD, MEJOR ORGANIZADA</p>
+        <h1>Reserva tu próxima cita médica</h1>
+        <p class="lead">Encuentra una atención y elige un horario disponible. Esta versión es una demostración del proyecto MediBook.</p>
+        <div class="note"><strong>Entorno de prueba</strong><span>Usa solo datos ficticios. Este formulario no protege información clínica.</span></div>
+      </section>
+      <section class="card" aria-labelledby="form-title">
+        <div class="card-heading"><div><p class="eyebrow">NUEVA RESERVA</p><h2 id="form-title">Datos de la cita</h2></div><span class="step">01</span></div>
+        <form id="appointment-form">
+          <label>Nombre de prueba<input name="patientName" autocomplete="off" maxlength="80" placeholder="Paciente demostración" required></label>
+          <div class="form-row">
+            <label>Especialidad<select name="specialty" required><option value="">Selecciona</option><option>Medicina general</option><option>Pediatría</option><option>Cardiología</option><option>Dermatología</option></select></label>
+            <label>Profesional<select name="doctor" required><option value="">Selecciona</option><option>Dra. Elena Rojas</option><option>Dr. Mateo Silva</option><option>Dra. Valeria Cruz</option></select></label>
+          </div>
+          <div class="form-row">
+            <label>Fecha<input name="date" type="date" required></label>
+            <label>Hora<select name="time" required><option value="">Selecciona</option><option>09:00</option><option>10:00</option><option>11:30</option><option>14:00</option><option>15:30</option></select></label>
+          </div>
+          <button id="submit-button" type="submit">Confirmar cita de prueba <span aria-hidden="true">→</span></button>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+      <section class="appointments" aria-labelledby="appointments-title">
+        <div class="section-heading"><div><p class="eyebrow">AGENDA</p><h2 id="appointments-title">Reservas de demostración</h2></div><button id="refresh" class="refresh" type="button">Actualizar</button></div>
+        <div id="appointment-list" class="appointment-list"><p class="empty">Cargando agenda…</p></div>
+      </section>
+    </main>
+    <footer>Proyecto académico MediBook · Infraestructura de demostración en AWS</footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>
+
